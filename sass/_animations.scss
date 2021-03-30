@@ -1,0 +1,88 @@
+.animate {
+  &__down {
+    animation: animateDown 1.2s;
+  }
+  &__left {
+    animation: animateLeft 1.2s;
+  }
+  &__right {
+    animation: animateRight 1.2s ease;
+  }
+}
+
+@keyframes animateDown {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes animateLeft {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes animateLeft {
+  0% {
+    transform: translateX(-600px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes animateRight {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+    transform: translateX(1250px);
+  }
+  60% {
+    transform: translateX(-50px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(0px);
+  }
+  90% {
+    transform: translateX(-5px);
+  }
+  95% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes enlarge {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes enlargeTwo {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 8.7em;
+  }
+}

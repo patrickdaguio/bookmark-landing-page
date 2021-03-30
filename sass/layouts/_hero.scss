@@ -1,0 +1,100 @@
+.hero {
+  position: relative;
+  padding: 3em;
+
+  @include media("<800px") {
+    padding: 2em 1em;
+  }
+  &::after {
+    content: "";
+    background-color: var(--color-soft-blue);
+    height: 21em;
+    width: 80em;
+    border-radius: 9em;
+    position: absolute;
+    left: 64vw;
+    bottom: 2em;
+    z-index: -3;
+
+    @include media(">=800px", "<=1000px") {
+      left: 80vw;
+    }
+    @include media("<800px") {
+      height: 52vw;
+      width: 80em;
+      left: 19vw;
+      top: 5.5em;
+    }
+  }
+
+  &__content-wrapper {
+    display: flex;
+    align-items: center;
+    max-width: 1104px;
+    margin: 0 auto;
+    @include media("<800px") {
+      flex-direction: column;
+    }
+  }
+
+  &__text-wrapper {
+    flex: 1 0 30rem;
+    margin-right: 4.6em;
+    margin-top: -1.25em;
+    @include media(">=800px", "<=1000px") {
+      margin-right: 1.5em;
+    }
+    @include media("<800px") {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin: 0em;
+      margin-top: 3em;
+      padding: 0em 1em;
+      order: 2;
+      flex: 0 1 auto;
+    }
+  }
+
+  &__heading {
+    font-size: 3em;
+    line-height: 1.15em;
+    @include media("<800px") {
+      font-size: 1.8em;
+    }
+  }
+
+  &__desc {
+    margin: 1.5em 0em;
+    @include media("<800px") {
+      max-width: 35em;
+      margin-bottom: 2em;
+    }
+  }
+
+  &__btn-wrapper {
+    @include media("<800px") {
+      display: flex;
+    }
+    button {
+      font-weight: 700;
+      @include media("<800px") {
+        font-size: 12.5px;
+        padding: 1.1em 1.7em;
+      }
+    }
+  }
+
+  &__btn-one {
+    margin-right: 0.75em;
+    @include media("<800px") {
+      margin-right: 1em;
+    }
+  }
+  &__image {
+    @include media("<800px") {
+      width: 100%;
+    }
+  }
+}

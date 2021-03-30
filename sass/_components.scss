@@ -1,0 +1,150 @@
+// ==============
+// HAMBURGER MENU
+// ==============
+
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: none;
+  outline: none;
+  height: 16px;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 7;
+
+  &__bar {
+    background-color: var(--color-very-dark-blue);
+    height: 3px;
+    width: 18px;
+    display: inline-block;
+    transition: all 0.5s;
+  }
+}
+
+.mobile-nav--active .hamburger-menu__bar--1 {
+  transform: translate(-1px, 5px) rotate(45deg);
+  background-color: white;
+}
+
+.mobile-nav--active .hamburger-menu__bar--2 {
+  opacity: 0;
+}
+
+.mobile-nav--active .hamburger-menu__bar--3 {
+  transform: translate(-1px, -8px) rotate(-45deg);
+  background-color: white;
+}
+
+// =========
+// HEADINGS
+// =========
+
+.heading {
+  color: var(--color-very-dark-blue);
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 2em;
+  @include media("<800px") {
+    font-size: 1.5em;
+  }
+}
+
+// ====
+// TEXT
+// ====
+
+.text {
+  color: var(--color-greyish-blue);
+  font-size: 18px;
+  line-height: 1.7em;
+  @include media("<800px") {
+    font-size: 15px;
+    max-width: 32em;
+    margin: auto;
+  }
+}
+
+// =======
+// BUTTONS
+// =======
+
+.btn {
+  border: 2px solid;
+  border-radius: 6px;
+  padding: 1.25em 1.6em;
+  font-size: 14px;
+  box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.20012);
+  letter-spacing: 0.25px;
+  font-weight: 500;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  &--blue {
+    background-color: var(--color-soft-blue);
+    border-color: transparent;
+
+    &:hover {
+      color: var(--color-soft-blue);
+      border-color: var(--color-soft-blue);
+      background-color: white;
+    }
+  }
+
+  &--grey {
+    background-color: hsl(0, 0, 97);
+    color: hsl(225, 2%, 40%);
+    border-color: hsl(0, 0, 97);
+
+    &:hover {
+      border-color: hsl(225, 2%, 40%);
+    }
+  }
+
+  &--red {
+    border-color: var(--color-soft-red);
+    background-color: var(--color-soft-red);
+
+    &:hover {
+      color: var(--color-soft-red);
+      background-color: white;
+    }
+  }
+}
+
+// ===============
+// DOWNLOADS CARD
+// ===============
+
+.download-card {
+  border-radius: 16px;
+  box-shadow: 0px 10px 20px -5px rgba(73, 93, 207, 0.2);
+  padding: 1.4em;
+  padding-top: 3em;
+  transition: 0.5s transform;
+  @include media(">=800px") {
+    &:hover {
+      transform: translateY(-15px);
+    }
+  }
+  &__heading {
+    margin-top: 1.5em;
+    font-size: 1.2em;
+  }
+  &__subheading {
+    margin-bottom: 1.5em;
+    margin-top: 0.5em;
+    font-size: 14.5px;
+  }
+  &__btn {
+    margin-top: 2.6em;
+    font-weight: 500;
+    padding: 1em 2.55em;
+  }
+
+  &__divider {
+    object-fit: contain;
+  }
+}
