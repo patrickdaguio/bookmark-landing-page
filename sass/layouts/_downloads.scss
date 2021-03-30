@@ -57,6 +57,9 @@
       margin: 0em;
       margin-left: 2em;
     }
+    @include media("<660px") {
+      margin-top: 2em;
+    }
   }
   &:nth-child(3) {
     margin-top: 8em;

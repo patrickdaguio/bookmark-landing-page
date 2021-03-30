@@ -30,12 +30,15 @@
   &:nth-child(1) {
     border-top: 1px solid rgba(0, 0, 0, 0.2);
   }
-  &__question {
-    color: var(--color-very-dark-blue);
-    font-size: 1.1em;
+
+  &__question-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  &__question {
+    color: var(--color-very-dark-blue);
+    font-size: 1.1em;
     padding: 1.5em 0em;
     outline: none;
     transition: all 0.3s;
@@ -47,6 +50,7 @@
       font-size: 0.91em;
     }
   }
+
   &__arrow {
     margin-right: 1.5em;
     transition: all 0.5s;
@@ -57,33 +61,24 @@
       margin-right: 0em;
     }
   }
+
+  &__answer-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s max-height ease-in-out;
+  }
   &__answer {
     font-size: 1.02em;
     line-height: 2.2em;
     margin-bottom: 1.75em;
-  }
-}
-
-.faq[open] summary {
-  ~ {
-    * {
-      animation: sweep 0.5s ease-in-out;
+    @include media("<800px") {
+      font-size: 13px;
+      max-width: initial;
     }
   }
 }
 
-@keyframes sweep {
-  0% {
-    opacity: 0;
-    transform: translatey(-15px);
-  }
-  100% {
-    opacity: 1;
-    transform: translatey(0px);
-  }
-}
-
-.faq[open] .faq__arrow {
+.faq__open {
   transform: rotate(180deg);
   * {
     stroke: var(--color-soft-red);

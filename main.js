@@ -106,3 +106,34 @@ function changeHighlight(e) {
 
 tabNumber.forEach(tab => tab.addEventListener('click', switchTabs))
 tabs.addEventListener('click', changeHighlight)
+
+// ================
+// | FAQ SECTION |
+// ===============
+
+const accordions = document.querySelectorAll(".faq");
+
+const openAccordion = (accordion) => {
+	const content = accordion.querySelector(".faq__answer-wrapper");
+	content.style.maxHeight = content.scrollHeight + "px";
+};
+
+const closeAccordion = (accordion) => {
+	const content = accordion.querySelector(".faq__answer-wrapper");
+	content.style.maxHeight = null;
+};
+
+accordions.forEach((accordion) => {
+	const intro = accordion.querySelector(".faq__question-wrapper");
+	const content = accordion.querySelector(".faq__answer-wrapper");
+    const arrow = accordion.querySelector('.faq__arrow')
+
+	intro.onclick = () => {
+        arrow.classList.toggle('faq__open')
+		if (content.style.maxHeight) {
+			closeAccordion(accordion);
+		} else {
+			openAccordion(accordion);
+		}
+	};
+});
