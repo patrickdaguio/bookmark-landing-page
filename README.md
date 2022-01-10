@@ -2,7 +2,9 @@
 
 A fully responsive landing page with animations for a software company made for the purpose of improving front-end skills.
 
-[View live website](https://bookmark-landing-page-phi.vercel.app/#)
+### [View live website](https://bookmark-landing-page-phi.vercel.app/#)
+
+---
 
 ### Technologies
 
@@ -10,5 +12,7 @@ A fully responsive landing page with animations for a software company made for 
 - CSS Custom Properties & Animations
 - SCSS (BEM Methdology)
 - Javascript (ES6+)
+
+---
 
 Thanks for checking out the project! 😁
